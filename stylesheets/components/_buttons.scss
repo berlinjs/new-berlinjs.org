@@ -34,7 +34,6 @@
     font-weight: 700;
     line-height: 2em;
     text-align: center;
-    z-index: 1;
 
     &:hover {
       @include linear-gradient(lightgrey, $pink);

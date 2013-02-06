@@ -1017,18 +1017,17 @@ ul.icons {
 .full_width {
   width: 100%; }
 
-/* 480 =================================================== */
-.one_third,
-.two_thirds,
-.one_half {
-  width: 100%; }
+@media only screen and (min-width: 320px) {
+  .one_third,
+  .two_thirds,
+  .one_half {
+    width: 100%; }
 
-.one_fourth {
-  width: 50%; }
+  .one_fourth {
+    width: 50%; }
 
-.one_sixth {
-  width: 33%; }
-
+  .one_sixth {
+    width: 33%; } }
 @media screen and (min-width: 700px) {
   .one_half {
     width: 50%; }
@@ -1471,8 +1470,7 @@ small {
     border-radius: 50%;
     font-weight: 700;
     line-height: 2em;
-    text-align: center;
-    z-index: 1; }
+    text-align: center; }
     .button.back-to-top:hover {
       background: lightgrey;
       background: -webkit-linear-gradient(lightgrey, #ff3f6d);
@@ -1655,6 +1653,7 @@ small {
 .hub-nav {
   position: relative;
   width: 100%;
+  margin-bottom: 2em;
   background: #333; }
   .hub-nav .nav-item {
     border-left: .25em solid;
@@ -2034,15 +2033,6 @@ a {
     z-index: 0; }
     .image-container img {
       width: 100%; } }
-#team figure {
-  width: 50%;
-  padding: 1em;
-  float: left; }
-  #team figure img {
-    width: 30%;
-    float: left;
-    margin: 0 1em 0 0; }
-
 .talk {
   position: relative;
   margin-bottom: 1em;
@@ -2056,6 +2046,12 @@ a {
 
 .site-footer {
   position: relative;
-  padding: 1em 0;
+  padding: 0 0 2em 0;
   background: #333;
   color: #fff; }
+  .site-footer section {
+    margin-left: 1em; }
+
+@media screen and (min-width: 700px) {
+  .site-footer {
+    padding-top: 2em; } }

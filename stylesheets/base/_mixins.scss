@@ -2,14 +2,6 @@
 // MIXINS
 // ------------------------------------
 
-@mixin margin {
-  margin: 1.5em;
-}
-
-@mixin padding {
-  padding: 1.5em;
-}
-
 // linear top to bottom gradient mixin
 
 @mixin linear-gradient($from, $to) {

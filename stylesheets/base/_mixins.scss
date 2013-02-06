@@ -1,0 +1,32 @@
+// ------------------------------------
+// MIXINS
+// ------------------------------------
+
+@mixin margin {
+  margin: 1.5em;
+}
+
+@mixin padding {
+  padding: 1.5em;
+}
+
+// linear top to bottom gradient mixin
+
+@mixin linear-gradient($from, $to) {
+  background: $from;
+  background: -webkit-linear-gradient($from, $to);
+  background: -moz-linear-gradient($from, $to);
+  background: -o-linear-gradient($from, $to);
+  background: -ms-linear-gradient($from, $to);
+  background: linear-gradient($from, $to);
+}
+
+// transitions
+
+@mixin transition {
+  -webkit-transition: all linear .1s;
+  -moz-transition: all linear .1s;
+  -o-transition: all linear .1s;
+  -ms-transition: all linear .1s;
+  transition: all linear .1s;
+}

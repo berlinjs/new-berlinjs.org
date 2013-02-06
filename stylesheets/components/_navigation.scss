@@ -1,0 +1,157 @@
+// ------------------------------------
+// NAVIGATIONS
+// ------------------------------------
+
+.nav-item {
+  display: block;
+  padding: .5em;
+  border-bottom: 1px solid #ccc;
+
+  &:hover {
+    background: rgba(255,255,255,.1);
+    text-decoration: none;
+  }
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+// hub navigation
+// * provides links to event pages
+// * uses footer anchor pattern in mobile
+// ------------------------------------
+
+.hub-nav {
+  position: relative;
+  width: 100%;
+  background: #333;
+
+  .nav-item {
+    border-left: .25em solid;
+    color: #fff;
+
+    &.regular { border-left-color: $blue;}
+    &.apps { border-left-color: $orange;}
+    &.node { border-left-color: $green;}
+    &.beginners { border-left-color: $red;}
+  }
+}
+
+// navigation helpers
+
+.go-to-nav {
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  width: auto;
+  padding: 1em;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  z-index: 1000;
+
+  &:hover {
+    background: rgba(255,255,255,.2);
+  }
+}
+
+// secondary navigation
+
+.secondary-nav {
+  display: inline-block;
+  width: 100%;
+  padding: 0 1em;
+  margin-bottom: 1em;
+  background: #fff;
+  text-align: center;
+}
+
+// secondary navigation within sidebar
+
+.sidebar .secondary-nav {
+  text-align: left;
+}
+
+// --------------------------------------
+// Styles for medium sized screens and up
+// --------------------------------------
+
+@media screen and (min-width: 700px) {
+
+  .nav-item {
+    display: inline-block;
+
+    &.back-to-top {
+      display: none;
+    }
+  }
+
+  // hub navigation
+
+  .hub-nav {
+    position: fixed;
+    width: auto;
+    padding-left: 1em;
+    top: 0;
+    z-index: 1;
+
+    .nav-item {
+      padding: 1em .5em .75em .5em;
+      border-top: 4.5px solid;
+      border-bottom: none;
+      border-left: none;
+      @include transition;
+
+      .back-to-top {
+        display: none;
+      }
+
+      &:hover, 
+      &:active, 
+      &.active {
+        padding-top: .5em;
+        margin-top: -1px;
+        border-top-width: .75em;
+        @include transition;
+      }
+      
+      &.regular { border-top-color: $blue;}
+      &.apps { border-top-color: $orange;}
+      &.node { border-top-color: $green;}
+      &.beginners { border-top-color: $red;}
+    }
+  }
+
+  // secondary navigation
+
+  .secondary-nav {
+    max-width: 46em;
+    text-align: left;
+
+    .nav-item {
+      border-bottom: none;
+    }
+  }
+
+  // secondary navigation within sidebar
+
+  .sidebar .secondary-nav {
+    text-align: left;
+
+    .nav-item {
+      display: block;
+      border-bottom: 1px solid #ccc;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+  }
+
+  // navigation helpers
+  
+  .go-to-nav {
+    display: none;
+  }
+}

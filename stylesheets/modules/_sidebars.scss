@@ -1,0 +1,92 @@
+// ------------------------------------
+// SIDEBARS
+// ------------------------------------
+
+// sidebar
+
+.sidebar-left {
+  position: relative;
+  top: 2em;
+  margin-bottom: 1em;
+  background: #fff;
+}
+
+.title {
+  padding: 0 1em 1em 1em;
+  background: #fff;
+  border-top: .5em solid;
+
+  h2 {
+    font-weight: 400;
+    margin-bottom: 0;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  h4 {
+    font-family: 'Droid Sans Mono', 'Inconsolata' monospace;
+    font-weight: 400;
+  }
+}
+
+.main {
+  position: relative;
+  @extend .content-box;
+}
+
+// --------------------------------------
+// Styles for medium sized screens and up
+// --------------------------------------
+
+@media screen and (min-width: 700px) {
+
+  .sidebar-right {
+    position: absolute;
+    display: inline-block;
+    right: 1em;
+    bottom: 0;
+    top: 0;
+    width: 22em;
+    float: right;
+    background: rgba(255,255,255,.3);
+    border-right: 2px dashed #ccc;
+    border-left: 2px dashed #ccc;
+    z-index: 0;
+
+    .event-timeline {
+      width: 22em;
+      overflow-y: auto;
+    }
+
+    .event {
+      box-shadow: 0 0 10px #666;
+
+      .title {
+        margin: 0;
+      }
+    }
+  }
+
+  .sidebar-left {
+    position: absolute;
+    top: 0;
+    left: 1em;
+    width: 21em;
+  }
+
+  .main {
+    position: relative;
+    @extend .content-box;
+  }
+
+  .landingpage .main {
+    margin: 0 24em 0 0;
+  }
+
+  .sub-page .main {
+    margin: 0 1em 0 23em;
+    border-top: .5em solid; 
+  }
+}

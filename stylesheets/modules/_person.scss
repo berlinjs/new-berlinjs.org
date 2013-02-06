@@ -1,0 +1,115 @@
+// ------------------------------------
+// PERSON
+// This module holds data about persons like
+// their name, picture, short bio and some links.
+// ------------------------------------
+
+.person {
+  padding: .5em 0;
+  color: #aaa;
+  font: italic 100%/2.5em'Droid Serif', serif;
+  @extend .cf;
+}
+
+.person-picture {
+  position: relative;
+  width: 6em;
+  margin: .5em 1em 1em 0;
+  float: left;
+
+  img {
+    max-width: 100%;
+    border-radius: 50%;
+    border: .25em solid #ccc;
+  }
+}
+
+.person-name {
+  color: #666;
+  font-family: 'Droid Serif', serif;
+  font-style: italic;
+}
+
+.person-links {
+  display: block;
+  margin-top: .5em;
+
+  a {
+    display: inline-block;
+    padding: 0 .5em;
+  }
+}
+
+.link-icon {
+  display: block;
+  width: 2em;
+  height: 2em;
+  margin: .5em auto;
+  opacity: .5;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &.twitter { background: url(../images/icons.png) no-repeat 0 -300px; }
+  &.github { background: url(../images/icons.png) no-repeat 0 -400px; }
+}
+
+.background
+
+a {
+  display: inline-block;
+}
+
+.person-info {
+  padding-top: .25em;
+  margin-left: 5em;
+  line-height: 1.25;
+}
+
+.landingpage .person {
+  font-size: 100%;
+}
+
+// Speaker info within .talk
+
+.talk {
+  .person-picture {
+    position: relative;
+    top: -1.75em;
+    width: 6em;
+    margin: .5em 1em 1em 0;
+    border-top: .25em solid $blue;
+    float: left;
+
+    img {
+      max-width: 100%;
+      margin-top: 1em;
+      border-radius: 50%;
+      border: .25em solid $blue;
+    }
+  }
+
+  .person-info {
+    margin-left: 0;
+  }
+
+  .person-links {
+    display: block;
+    width: 6em;
+    margin-top: .5em;
+    text-align: center;
+
+    a {
+      display: block;
+      padding: 0;
+      margin:  0 auto .5em;
+      color: #ccc;
+
+      &:hover {
+        color: $pink;
+        text-decoration: none;
+      }
+    }
+  }
+}

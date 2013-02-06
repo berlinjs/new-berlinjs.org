@@ -1,0 +1,53 @@
+// ------------------------------------
+// COLORS
+// ------------------------------------
+
+// basic colors
+// ------------
+
+// text
+$dark-grey: #333;
+
+// links (darken on :hover)
+$pink: #ff3f6d; 
+$dark-pink: darken($pink, 20%);
+
+// color palette
+// -------------
+
+// regular meetup
+$blue: #1d9fcd;
+$lighter-blue: lighten($blue, 40%);
+$light-blue: lighten($blue, 20%);
+$dark-blue: darken($blue, 20%);
+$darker-blue: darken($blue, 30%);
+
+// apps meetup
+$orange: #f5a531;
+$lighter-orange: lighten($orange, 30%);
+$light-orange: lighten($orange, 20%);
+$dark-orange: darken($orange, 20%);
+$darker-orange: darken($orange, 30%);
+
+// ember meetup
+$ember: #e95035;
+$lighter-ember: lighten($ember, 30%);
+$light-ember: lighten($ember, 20%);
+$dark-ember: darken($ember, 20%);
+$darker-ember: darken($ember, 30%);
+
+//node meetup
+$green: #90c924;
+$lighter-green: lighten($green, 30%);
+$light-green: lighten($green, 20%);
+$dark-green: darken($green, 20%);
+$darker-green: darken($green, 30%);
+
+$violet: #823ca2;
+$light-violet: lighten($violet, 20%);
+$dark-violet: darken($violet, 20%);
+
+$red: #d30c1e;
+$lighter-red: lighten($red, 30%);
+$light-red: lighten($red, 20%);
+$dark-red: darken($red, 20%);

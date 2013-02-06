@@ -1,0 +1,79 @@
+// ------------------------------------
+// THEMES
+// ------------------------------------
+
+.logo {
+  display: none;
+}
+
+@media screen and (min-width: 700px) {
+  .logo {
+    width: 10em;
+    margin: 2em 0 4em 0;
+    display: block;
+
+    img{
+      max-width: 100%;
+    }
+  }
+}
+
+.regular {
+  .title,
+  .main {
+    border-top-color: $blue;
+
+    h2 span {
+      color: $blue;
+    }
+  }
+
+  &.event:not(.next) time {
+    background: $blue;
+  }
+}
+
+.apps {
+  .title,
+  .main {
+    border-top-color: $orange;
+
+    h2 span {
+      color: $orange;
+    }
+  }
+
+  &.event:not(.next) time {
+    background: $orange;
+  }  
+}
+
+.node {
+  .title,
+  .main {
+    border-top-color: $green;
+
+    h2 span {
+      color: $green;
+    }
+  }
+
+  &.event:not(.next) time {
+    background: $green;
+  }
+}
+
+.beginners {
+  .title,
+  .main {
+    border-top-color: $red;
+
+    h2 span {
+      color: $red;
+    }
+  }
+
+  &.event:not(.next) time {
+    background: $red;
+  }
+}

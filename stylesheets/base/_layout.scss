@@ -1,0 +1,65 @@
+// ------------------------------------
+// LAYOUT
+// ------------------------------------
+
+.line,
+.last_unit {
+  overflow: hidden;
+}
+
+.unit {
+  float: left;
+}
+
+.last_unit {
+  width: auto;
+  float: none;
+}
+
+.full_width {
+  width: 100%;
+}
+
+// @media only screen and (max-width: 480px) {
+  /* 480 =================================================== */
+
+  .one_third,
+  .two_thirds,
+  .one_half {
+    width: 100%;
+  }
+
+  .one_fourth {
+    width: 50%;
+  }
+
+  .one_sixth {
+    width: 33%;
+  }
+
+// }
+
+@media screen and (min-width: 700px) {
+
+  .one_half { width: 50%; }
+
+  .one_third { width: 33.333333%; }
+  .two_thirds { width: 66.666666%; }
+
+  .one_fourth { width: 25%; }
+  .three_fourths { width: 75%; }
+
+  .one_fifth { width: 20%; }
+  .two_fifths { width: 40%; }
+  .three_fifths { width: 60%; }
+  .four_fifths { width: 80%; }
+
+  .one_sixth { width: 16.666666%; }
+}
+
+// High resolution displays like retina
+// ------------------------------------
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+
+}

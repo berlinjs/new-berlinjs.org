@@ -20,8 +20,10 @@
   width: 100%;
 }
 
-// @media only screen and (max-width: 480px) {
-  /* 480 =================================================== */
+// Small to medium screens
+// ------------------------------------
+
+@media only screen and (min-width: 320px) {
 
   .one_third,
   .two_thirds,
@@ -36,8 +38,10 @@
   .one_sixth {
     width: 33%;
   }
+}
 
-// }
+// Larger then medium and huge screens
+// ------------------------------------
 
 @media screen and (min-width: 700px) {
 

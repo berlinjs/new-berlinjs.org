@@ -29,6 +29,7 @@
   background: #333;
 
   .nav-item {
+    margin: 0;
     border-left: .25em solid;
     color: #fff;
 
@@ -62,7 +63,6 @@
 .secondary-nav {
   display: inline-block;
   width: 100%;
-  padding: 0 1em;
   margin-bottom: 1em;
   background: #fff;
   text-align: center;
@@ -70,8 +70,8 @@
 
 // secondary navigation within sidebar
 
-.sidebar .secondary-nav {
-  text-align: left;
+.sidebar .nav-item {
+    margin: 0 1em;
 }
 
 // --------------------------------------
@@ -122,10 +122,10 @@
   // secondary navigation
 
   .secondary-nav {
-    max-width: 46em;
     text-align: left;
 
     .nav-item {
+      margin-left: 1em;
       border-bottom: none;
     }
   }
@@ -137,6 +137,7 @@
 
     .nav-item {
       display: block;
+      margin: 0 1em;
       border-bottom: 1px solid #ccc;
 
       &:last-of-type {

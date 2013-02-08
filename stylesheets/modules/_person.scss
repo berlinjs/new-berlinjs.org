@@ -5,10 +5,15 @@
 // ------------------------------------
 
 .person {
+  display: table;
   padding: .5em 0;
+  border-bottom: 1px solid #ccc;
   color: #aaa;
   font: italic 100%/2.5em'Droid Serif', serif;
-  @extend .cf;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
 }
 
 .person-picture {
@@ -62,9 +67,11 @@ a {
 }
 
 .person-info {
+  display: table-cell;
   padding-top: .25em;
   margin-left: 5em;
   line-height: 1.25;
+  vertical-align: middle;
 }
 
 .landingpage .person {

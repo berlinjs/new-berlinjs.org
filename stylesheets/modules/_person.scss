@@ -6,10 +6,9 @@
 
 .person {
   display: table;
-  padding: .5em 0;
-  border-bottom: 1px solid #ccc;
   color: #aaa;
-  font: italic 100%/2.5em'Droid Serif', serif;
+  font-family: 'Droid Serif', serif;
+  font-style: italic;
 
   &:last-of-type {
     border-bottom: none;
@@ -19,7 +18,7 @@
 .person-picture {
   position: relative;
   width: 6em;
-  margin: .5em 1em 1em 0;
+  margin: .5em 1em 0 0;
   float: left;
 
   img {
@@ -37,7 +36,6 @@
 
 .person-links {
   display: block;
-  margin-top: .5em;
 
   a {
     display: inline-block;
@@ -74,6 +72,23 @@ a {
   vertical-align: middle;
 }
 
+.person-links {
+    display: block;
+    width: 6em;
+    text-align: center;
+
+    a {
+      padding: .25em;
+      margin:  0 auto .5em;
+      color: #ccc;
+
+      &:hover {
+        color: $pink;
+        text-decoration: none;
+      }
+    }
+  }
+
 .landingpage .person {
   font-size: 100%;
 }
@@ -99,24 +114,5 @@ a {
 
   .person-info {
     margin-left: 0;
-  }
-
-  .person-links {
-    display: block;
-    width: 6em;
-    margin-top: .5em;
-    text-align: center;
-
-    a {
-      display: block;
-      padding: 0;
-      margin:  0 auto .5em;
-      color: #ccc;
-
-      &:hover {
-        color: $pink;
-        text-decoration: none;
-      }
-    }
   }
 }

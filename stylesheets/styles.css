@@ -1740,17 +1740,16 @@ small {
     display: none; } }
 .person {
   display: table;
-  padding: .5em 0;
-  border-bottom: 1px solid #ccc;
   color: #aaa;
-  font: italic 100%/2.5em "Droid Serif", serif; }
+  font-family: 'Droid Serif', serif;
+  font-style: italic; }
   .person:last-of-type {
     border-bottom: none; }
 
 .person-picture {
   position: relative;
   width: 6em;
-  margin: .5em 1em 1em 0;
+  margin: .5em 1em 0 0;
   float: left; }
   .person-picture img {
     max-width: 100%;
@@ -1763,8 +1762,7 @@ small {
   font-style: italic; }
 
 .person-links {
-  display: block;
-  margin-top: .5em; }
+  display: block; }
   .person-links a {
     display: inline-block;
     padding: 0 .5em; }
@@ -1793,6 +1791,18 @@ a {
   line-height: 1.25;
   vertical-align: middle; }
 
+.person-links {
+  display: block;
+  width: 6em;
+  text-align: center; }
+  .person-links a {
+    padding: .25em;
+    margin: 0 auto .5em;
+    color: #ccc; }
+    .person-links a:hover {
+      color: #ff3f6d;
+      text-decoration: none; }
+
 .landingpage .person {
   font-size: 100%; }
 
@@ -1810,19 +1820,6 @@ a {
     border: 0.25em solid #1d9fcd; }
 .talk .person-info {
   margin-left: 0; }
-.talk .person-links {
-  display: block;
-  width: 6em;
-  margin-top: .5em;
-  text-align: center; }
-  .talk .person-links a {
-    display: block;
-    padding: 0;
-    margin: 0 auto .5em;
-    color: #ccc; }
-    .talk .person-links a:hover {
-      color: #ff3f6d;
-      text-decoration: none; }
 
 .sidebar-left {
   position: relative;

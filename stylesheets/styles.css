@@ -67,8 +67,7 @@
 [class*=" icon-"]:before {
   text-decoration: inherit;
   display: inline-block;
-  speak: none;
-  font-size: 150%; }
+  speak: none; }
 
 /* makes sure icons active on rollover in links */
 a [class^="icon-"],
@@ -1672,7 +1671,7 @@ small {
   display: inline-block;
   right: 0;
   width: auto;
-  padding: 1em;
+  padding: .5em;
   color: #fff;
   font-weight: 400;
   text-align: center;
@@ -1704,8 +1703,7 @@ small {
     top: 0;
     z-index: 1; }
     .hub-nav .nav-item {
-      padding: 1em .5em .75em .5em;
-      border-top: 4.5px solid;
+      border-top: 5px solid;
       border-bottom: none;
       border-left: none;
       -webkit-transition: all linear .1s;
@@ -1715,15 +1713,6 @@ small {
       transition: all linear .1s; }
       .hub-nav .nav-item .back-to-top {
         display: none; }
-      .hub-nav .nav-item:hover, .hub-nav .nav-item:active, .hub-nav .nav-item.active {
-        padding-top: .5em;
-        margin-top: -1px;
-        border-top-width: .75em;
-        -webkit-transition: all linear .1s;
-        -moz-transition: all linear .1s;
-        -o-transition: all linear .1s;
-        -ms-transition: all linear .1s;
-        transition: all linear .1s; }
       .hub-nav .nav-item.regular {
         border-top-color: #1d9fcd; }
       .hub-nav .nav-item.apps {
@@ -1750,9 +1739,13 @@ small {
   .go-to-nav {
     display: none; } }
 .person {
+  display: table;
   padding: .5em 0;
+  border-bottom: 1px solid #ccc;
   color: #aaa;
   font: italic 100%/2.5em "Droid Serif", serif; }
+  .person:last-of-type {
+    border-bottom: none; }
 
 .person-picture {
   position: relative;
@@ -1794,9 +1787,11 @@ a {
   display: inline-block; }
 
 .person-info {
+  display: table-cell;
   padding-top: .25em;
   margin-left: 5em;
-  line-height: 1.25; }
+  line-height: 1.25;
+  vertical-align: middle; }
 
 .landingpage .person {
   font-size: 100%; }
@@ -1957,13 +1952,12 @@ body {
 .beginners ::selection {
   background: #d30c1e; }
 
-.cf:before, .person:before,
-.cf:after,
-.person:after {
+.cf:before,
+.cf:after {
   content: " ";
   display: table; }
 
-.cf:after, .person:after {
+.cf:after {
   clear: both; }
 
 article {
@@ -1983,13 +1977,12 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  height: 3.5em;
   background: #333;
   box-shadow: 0 0 10px #333;
   z-index: 1; }
   .site-header h1 {
     display: inline-block;
-    margin: 1rem 0 1rem 1rem;
+    margin: .5rem 0 .5rem 1rem;
     font-size: 1.5em;
     color: #fff; }
 
@@ -2027,7 +2020,7 @@ a {
   .image-container {
     position: fixed;
     display: block;
-    top: 3em;
+    top: 2em;
     width: 100%;
     overflow: hidden;
     z-index: 0; }

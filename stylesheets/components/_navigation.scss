@@ -46,7 +46,7 @@
   display: inline-block;
   right: 0;
   width: auto;
-  padding: 1em;
+  padding: .5em;
   color: #fff;
   font-weight: 400;
   text-align: center;
@@ -98,8 +98,7 @@
     z-index: 1;
 
     .nav-item {
-      padding: 1em .5em .75em .5em;
-      border-top: 4.5px solid;
+      border-top: 5px solid;
       border-bottom: none;
       border-left: none;
       @include transition;
@@ -111,10 +110,6 @@
       &:hover, 
       &:active, 
       &.active {
-        padding-top: .5em;
-        margin-top: -1px;
-        border-top-width: .75em;
-        @include transition;
       }
       
       &.regular { border-top-color: $blue;}

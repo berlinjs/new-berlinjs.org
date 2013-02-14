@@ -20,11 +20,12 @@
   width: 6em;
   margin: .5em 1em 0 0;
   float: left;
+  overflow: hidden;
 
   img {
-    max-width: 100%;
-    border-radius: 50%;
-    border: .25em solid #ccc;
+  max-width: 100%;
+  border-radius: 50%;
+  border: .25em solid #ccc;
   }
 }
 
@@ -101,7 +102,7 @@ a {
     top: -1.75em;
     width: 6em;
     margin: .5em 1em 1em 0;
-    border-top: .25em solid $blue;
+    border: none;
     float: left;
 
     img {
@@ -121,4 +122,11 @@ a {
 
 .event-details .person-picture {
   width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  border: .25em solid #ccc;
+
+  img {
+    border: none;
+  }
 }

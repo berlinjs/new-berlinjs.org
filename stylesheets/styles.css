@@ -1751,7 +1751,8 @@ small {
   position: relative;
   width: 6em;
   margin: .5em 1em 0 0;
-  float: left; }
+  float: left;
+  overflow: hidden; }
   .person-picture img {
     max-width: 100%;
     border-radius: 50%;
@@ -1812,7 +1813,7 @@ a {
   top: -1.75em;
   width: 6em;
   margin: .5em 1em 1em 0;
-  border-top: 0.25em solid #1d9fcd;
+  border: none;
   float: left; }
   .talk .person-picture img {
     max-width: 100%;
@@ -1823,7 +1824,12 @@ a {
   margin-left: 0; }
 
 .event-details .person-picture {
-  width: 4em; }
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  border: .25em solid #ccc; }
+  .event-details .person-picture img {
+    border: none; }
 
 .sidebar-left {
   position: relative;

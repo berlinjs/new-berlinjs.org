@@ -1627,7 +1627,7 @@ small {
   color: #666;
   font-size: .75em; }
   .event-details li {
-    padding: .5em 0 0 2.5em;
+    padding: .5em 0;
     border-bottom: 1px solid #e1e1e1;
     line-height: 2; }
     .event-details li:last-child {
@@ -1821,6 +1821,9 @@ a {
     border: 0.25em solid #1d9fcd; }
 .talk .person-info {
   margin-left: 0; }
+
+.event-details .person-picture {
+  width: 4em; }
 
 .sidebar-left {
   position: relative;

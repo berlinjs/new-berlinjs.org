@@ -1,0 +1,33 @@
+// ------------------------------------
+// SITE HEADER
+// ------------------------------------
+// contains the "hub-navigation" which allows access to 
+// all event pages, it's always on top of the page
+
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #333;
+  box-shadow: 0 0 10px #333;
+  z-index: 1;
+
+  h1 {
+    display: inline-block;
+    margin: .5rem 0 .5rem 1rem;
+    font-size: 1.5em;
+    color: #fff;
+  }
+}
+
+@media screen and (min-width: 700px) {
+
+  .site-header {
+    position: fixed;
+  }
+
+  .sub-page .content-wrapper {
+    margin: 5em auto 0 auto;
+  }
+}

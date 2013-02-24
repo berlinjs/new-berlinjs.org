@@ -1,3 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  background: url(../images/bg_body.jpg); }
+
+article {
+  padding: 1em; }
+
+ul {
+  list-style-type: none; }
+
+a {
+  color: #ff3f6d;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+::selection {
+  background: #ff3f6d;
+  color: #fff; }
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
 /*
  *  Font Awesome 3.0.2
  *  the iconic font designed for use with Twitter Bootstrap
@@ -1002,6 +1037,16 @@ ul.icons {
 .icon-folder-open-alt:before {
   content: "\f115"; }
 
+.wrapper {
+  position: relative;
+  max-width: 70em;
+  margin: 0 auto; }
+
+.content-wrapper {
+  position: relative;
+  max-width: 70em;
+  margin: 3em auto 0 auto; }
+
 .line,
 .last_unit {
   overflow: hidden; }
@@ -1056,7 +1101,10 @@ ul.icons {
     width: 80%; }
 
   .one_sixth {
-    width: 16.666666%; } }
+    width: 16.666666%; }
+
+  .five_sixths {
+    width: 83.33333%; } }
 /* normalize.css v2.1.0 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -1398,7 +1446,7 @@ body {
   -webkit-font-smoothing: antialiased; }
 
 h1, h2, h3, h4 {
-  font-weight: 700; }
+  font-weight: 00; }
 
 h1 {
   font-size: 2.38889em;
@@ -1739,6 +1787,72 @@ small {
 
   .go-to-nav {
     display: none; } }
+.talk {
+  position: relative;
+  margin-bottom: 1em;
+  border-top: .25em solid #ccc; }
+
+.free-slot {
+  opacity: .5; }
+
+.talk-title h3 {
+  margin: 0 0 1em 0; }
+
+.content {
+  padding: 2em;
+  background: #fff;
+  border-bottom: 1px solid #ccc; }
+  .content section {
+    position: relative;
+    padding: 1em 0; }
+
+.testimonial {
+  margin: 1em; }
+
+.image-container {
+  display: none; }
+
+@media screen and (min-width: 700px) {
+  .image-container {
+    position: fixed;
+    display: block;
+    top: 2em;
+    width: 100%;
+    overflow: hidden;
+    z-index: 0; }
+    .image-container img {
+      width: 100%; } }
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #333;
+  box-shadow: 0 0 10px #333;
+  z-index: 1; }
+  .site-header h1 {
+    display: inline-block;
+    margin: .5rem 0 .5rem 1rem;
+    font-size: 1.5em;
+    color: #fff; }
+
+@media screen and (min-width: 700px) {
+  .site-header {
+    position: fixed; }
+
+  .sub-page .content-wrapper {
+    margin: 5em auto 0 auto; } }
+.site-footer {
+  position: relative;
+  padding: 0 0 2em 0;
+  background: #333;
+  color: #fff; }
+  .site-footer section {
+    margin-left: 1em; }
+
+@media screen and (min-width: 700px) {
+  .site-footer {
+    padding-top: 2em; } }
 .person {
   display: table;
   color: #aaa;
@@ -1826,6 +1940,7 @@ a {
 .event-details .person-picture {
   width: 4em;
   height: 4em;
+  margin-top: 0;
   border-radius: 50%;
   border: .25em solid #ccc; }
   .event-details .person-picture img {
@@ -1908,6 +2023,9 @@ a {
 .regular.event:not(.next) time {
   background: #1d9fcd; }
 
+.regular ::selection {
+  background: #1d9fcd; }
+
 .apps .title,
 .apps .main {
   border-top-color: #f5a531; }
@@ -1915,6 +2033,9 @@ a {
   .apps .main h2 span {
     color: #f5a531; }
 .apps.event:not(.next) time {
+  background: #f5a531; }
+
+.apps ::selection {
   background: #f5a531; }
 
 .node .title,
@@ -1926,6 +2047,9 @@ a {
 .node.event:not(.next) time {
   background: #90c924; }
 
+.node ::selection {
+  background: #90c924; }
+
 .beginners .title,
 .beginners .main {
   border-top-color: #d30c1e; }
@@ -1935,123 +2059,5 @@ a {
 .beginners.event:not(.next) time {
   background: #d30c1e; }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box; }
-
-body {
-  background: url(../images/bg_body.jpg); }
-
-::selection {
-  background: #ff3f6d;
-  color: #fff; }
-
-.regular ::selection {
-  background: #1d9fcd; }
-
-.apps ::selection {
-  background: #f5a531; }
-
-.node ::selection {
-  background: #90c924; }
-
 .beginners ::selection {
   background: #d30c1e; }
-
-.cf:before,
-.cf:after {
-  content: " ";
-  display: table; }
-
-.cf:after {
-  clear: both; }
-
-article {
-  padding: 1em; }
-
-ul {
-  list-style-type: none; }
-
-a {
-  color: #ff3f6d;
-  text-decoration: none; }
-  a:hover {
-    text-decoration: underline; }
-
-.site-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #333;
-  box-shadow: 0 0 10px #333;
-  z-index: 1; }
-  .site-header h1 {
-    display: inline-block;
-    margin: .5rem 0 .5rem 1rem;
-    font-size: 1.5em;
-    color: #fff; }
-
-.wrapper {
-  position: relative;
-  max-width: 70em;
-  margin: 0 auto; }
-
-.content-wrapper {
-  position: relative;
-  max-width: 70em;
-  margin: 3em auto 0 auto; }
-
-@media screen and (min-width: 700px) {
-  .site-header {
-    position: fixed; }
-
-  .sub-page .content-wrapper {
-    margin: 5em auto 0 auto; } }
-.content {
-  padding: 2em;
-  background: #fff;
-  border-bottom: 1px solid #ccc; }
-  .content section {
-    position: relative;
-    padding: 1em 0; }
-
-.image-container {
-  display: none; }
-
-.testimonial {
-  margin: 1em; }
-
-@media screen and (min-width: 700px) {
-  .image-container {
-    position: fixed;
-    display: block;
-    top: 2em;
-    width: 100%;
-    overflow: hidden;
-    z-index: 0; }
-    .image-container img {
-      width: 100%; } }
-.talk {
-  position: relative;
-  margin-bottom: 1em;
-  border-top: .25em solid #ccc; }
-
-.free-slot {
-  opacity: .5; }
-
-.talk-title h3 {
-  margin: 0 0 1em 0; }
-
-.site-footer {
-  position: relative;
-  padding: 0 0 2em 0;
-  background: #333;
-  color: #fff; }
-  .site-footer section {
-    margin-left: 1em; }
-
-@media screen and (min-width: 700px) {
-  .site-footer {
-    padding-top: 2em; } }

@@ -2,6 +2,33 @@
 // LAYOUT
 // ------------------------------------
 
+// containing elements
+
+.wrapper {
+  position: relative;
+  max-width: 70em;
+  margin: 0 auto;
+}
+
+.content-wrapper {
+  position: relative;
+  max-width: 70em;
+  margin: 3em auto 0 auto;
+}
+
+// Small responsive grid system
+// ------------------------------------
+// * each line is as high as it's highest child
+// * can be nested easily
+// * applicable to almost any HTML element
+//
+// When needed, use it like this:
+// <div class="line">
+//   <div class="unit one_third"></div>
+//   <div class="unit one_third"></div>
+//   <div class="unit last_unit one_third"></div>
+// </div>
+
 .line,
 .last_unit {
   overflow: hidden;
@@ -59,11 +86,5 @@
   .four_fifths { width: 80%; }
 
   .one_sixth { width: 16.666666%; }
-}
-
-// High resolution displays like retina
-// ------------------------------------
-
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-
+  .five_sixths { width: 83.33333%; }
 }

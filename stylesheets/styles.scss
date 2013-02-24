@@ -8,6 +8,7 @@
 // Please do not change any styles in here unless you're debugging.
 
 @import "base/colors";
+@import "base/basic";
 @import "base/font-awesome";
 @import "base/layout";
 @import "base/mixins";
@@ -24,189 +25,14 @@
 
 // Modules
 // ------------------------------------
+// Larger building areas of the website.
 
+@import "modules/announcements";
+@import "modules/content";
+@import "modules/header";
+@import "modules/footer";
 @import "modules/person";
 @import "modules/sidebars";
 @import "modules/theme";
 
 // ====================================
-
-
-// basic settings
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background: url(../images/bg_body.jpg);
-}
-
-::selection {
-  background: $pink;
-  color: #fff;
-}
-
-.regular ::selection {
-  background: $blue;
-}
-
-.apps ::selection {
-  background: $orange;
-}
-
-.node ::selection {
-  background: $green;
-}
-
-.beginners ::selection {
-  background: $red;
-}
-
-.cf:before,
-.cf:after {
-  content: " ";
-  display: table;
-}
-
-.cf:after {
-  clear: both;
-}
-
-article {
-  padding: 1em;
-}
-
-ul {
-  list-style-type: none;
-}
-
-a {
-  color: $pink;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-// header of the site
-// ------------------
-// contains the "hub-navigation" which allows access to 
-// all event pages, it's always on top of the page
-
-.site-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #333;
-  box-shadow: 0 0 10px #333;
-  z-index: 1;
-
-  h1 {
-    display: inline-block;
-    margin: .5rem 0 .5rem 1rem;
-    font-size: 1.5em;
-    color: #fff;
-  }
-}
-
-.wrapper {
-  position: relative;
-  max-width: 70em;
-  margin: 0 auto;
-}
-
-.content-wrapper {
-  position: relative;
-  max-width: 70em;
-  margin: 3em auto 0 auto;
-}
-
-@media screen and (min-width: 700px) {
-
-  .site-header {
-    position: fixed;
-  }
-
-  .sub-page .content-wrapper {
-    margin: 5em auto 0 auto;
-  }
-}
-
-// content
-
-.content {
-  padding: 2em;
-  background: #fff;
-  border-bottom: 1px solid #ccc;
-
-  section {
-    position: relative;
-    padding: 1em 0;
-  }
-}
-
-.image-container {
-  display: none;
-}
-
-.testimonial {
-  margin: 1em;
-}
-
-@media screen and (min-width: 700px) {
-
-  .image-container {
-    position: fixed;
-    display: block;
-    top: 2em;
-    width: 100%;
-    overflow: hidden;
-    z-index: 0;
-
-    img {
-      width: 100%;
-    }
-  }
-}
-
-// anouncements
-
-.talk {
-  position: relative;
-  margin-bottom: 1em;
-  border-top: .25em solid #ccc;
-}
-
-.free-slot {
-  opacity: .5;
-}
-
-.talk-title {
-  h3 {
-    margin: 0 0 1em 0;
-  }
-}
-
-
-.site-footer {
-  position: relative;
-  padding: 0 0 2em 0;
-  background: #333;
-  color: #fff;
-
-  section {
-    margin-left: 1em;
-  }
-}
-
-@media screen and (min-width: 700px) {
-
-  .site-footer {
-    padding-top: 2em;
-  }
-}

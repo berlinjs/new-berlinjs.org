@@ -1,0 +1,21 @@
+// ------------------------------------
+// FOOTER
+// ------------------------------------
+
+.site-footer {
+  position: relative;
+  padding: 0 0 2em 0;
+  background: #333;
+  color: #fff;
+
+  section {
+    margin-left: 1em;
+  }
+}
+
+@media screen and (min-width: 700px) {
+
+  .site-footer {
+    padding-top: 2em;
+  }
+}

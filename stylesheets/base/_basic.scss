@@ -1,0 +1,51 @@
+// ------------------------------------
+// BASIC STYLES
+// ------------------------------------
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(../images/bg_body.jpg);
+}
+
+article {
+  padding: 1em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: $pink;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+::selection {
+  background: $pink;
+  color: #fff;
+}
+
+// clearfix class
+// micro clearfix by Nicolas Gallagher 
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}

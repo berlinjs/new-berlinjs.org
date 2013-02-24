@@ -1,0 +1,40 @@
+// ------------------------------------
+// CONTENT STYLES
+// ------------------------------------
+
+.content {
+  padding: 2em;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+
+  section {
+    position: relative;
+    padding: 1em 0;
+  }
+}
+
+.testimonial {
+  margin: 1em;
+}
+
+// big imagery in the background of the landingpage
+
+.image-container {
+  display: none;
+}
+
+@media screen and (min-width: 700px) {
+
+  .image-container {
+    position: fixed;
+    display: block;
+    top: 2em;
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+}

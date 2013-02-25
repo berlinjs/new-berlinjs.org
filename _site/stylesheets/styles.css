@@ -1679,6 +1679,8 @@ small {
       border-left-color: #90c924; }
     .hub-nav .nav-item.beginners {
       border-left-color: #d30c1e; }
+    .hub-nav .nav-item.meteor {
+      border-left-color: #333333; }
 
 .go-to-nav {
   position: absolute;
@@ -1762,6 +1764,8 @@ small {
         border-top-color: #90c924; }
       .hub-nav .nav-item.beginners {
         border-top-color: #d30c1e; }
+      .hub-nav .nav-item.meteor {
+        border-top-color: black; }
 
   .secondary-nav {
     text-align: left; }
@@ -2054,3 +2058,16 @@ a {
 
 .beginners ::selection {
   background: #d30c1e; }
+
+.meteor .title,
+.meteor .main {
+  border-top-color: #333333; }
+  .meteor .title h2 span,
+  .meteor .main h2 span {
+    color: #333333; }
+.meteor.event:not(.next) time {
+  background: #333333; }
+
+.meteor ::selection {
+  background: yellow;
+  color: #333333; }

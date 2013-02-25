@@ -109,3 +109,26 @@
 .beginners ::selection {
   background: $red;
 }
+
+// meteor meetup
+// ------------------------------------
+
+.meteor {
+  .title,
+  .main {
+    border-top-color: $dark-grey;
+
+    h2 span {
+      color: $dark-grey;
+    }
+  }
+
+  &.event:not(.next) time {
+    background: $dark-grey;
+  }  
+}
+
+.meteor ::selection {
+  background: $yellow;
+  color: $dark-grey;
+}

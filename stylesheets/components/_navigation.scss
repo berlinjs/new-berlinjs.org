@@ -37,6 +37,7 @@
     &.apps { border-left-color: $orange;}
     &.node { border-left-color: $green;}
     &.beginners { border-left-color: $red;}
+    &.meteor { border-left-color: $dark-grey;}
   }
 }
 
@@ -149,6 +150,7 @@
       &.apps { border-top-color: $orange;}
       &.node { border-top-color: $green;}
       &.beginners { border-top-color: $red;}
+      &.meteor { border-top-color: $black;}
     }
   }
 

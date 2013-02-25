@@ -1506,33 +1506,6 @@ small {
     -o-transition: all linear .1s;
     -ms-transition: all linear .1s;
     transition: all linear .1s; }
-  .button.back-to-top {
-    position: relative;
-    display: block;
-    width: 2em;
-    height: 2em;
-    padding: 0;
-    margin: 0 auto -3em auto;
-    border: none;
-    border-radius: 50%;
-    font-weight: 700;
-    line-height: 2em;
-    text-align: center; }
-    .button.back-to-top:hover {
-      background: lightgrey;
-      background: -webkit-linear-gradient(lightgrey, #ff3f6d);
-      background: -moz-linear-gradient(lightgrey, #ff3f6d);
-      background: -o-linear-gradient(lightgrey, #ff3f6d);
-      background: -ms-linear-gradient(lightgrey, #ff3f6d);
-      background: linear-gradient(lightgrey, #ff3f6d); }
-
-.top-anchor {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 1em;
-  height: 1em; }
 
 .blue-button {
   background: #67c7e9;
@@ -1727,6 +1700,34 @@ small {
   z-index: 1000; }
   .go-to-nav:hover {
     background: rgba(255, 255, 255, 0.2); }
+
+.back-to-top {
+  position: relative;
+  display: block;
+  width: 2em;
+  height: 2em;
+  padding: 0;
+  margin: 0 auto -3em auto;
+  border: none;
+  border-radius: 50%;
+  font-weight: 700;
+  line-height: 2em;
+  text-align: center; }
+  .back-to-top:hover {
+    background: lightgrey;
+    background: -webkit-linear-gradient(lightgrey, #ff3f6d);
+    background: -moz-linear-gradient(lightgrey, #ff3f6d);
+    background: -o-linear-gradient(lightgrey, #ff3f6d);
+    background: -ms-linear-gradient(lightgrey, #ff3f6d);
+    background: linear-gradient(lightgrey, #ff3f6d); }
+
+.top-anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 1em;
+  height: 1em; }
 
 .secondary-nav {
   display: inline-block;

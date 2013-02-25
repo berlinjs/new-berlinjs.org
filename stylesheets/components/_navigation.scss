@@ -40,7 +40,10 @@
   }
 }
 
-// navigation helpers
+// helpers for page navigation
+// ------------------------------------
+
+// jump to hub navigation
 
 .go-to-nav {
   position: absolute;
@@ -58,7 +61,37 @@
   }
 }
 
+// jump to the top of the page
+
+.back-to-top {
+  position: relative;
+  display: block;
+  width: 2em;
+  height: 2em;
+  padding: 0;
+  margin: 0 auto -3em auto;
+  border: none;
+  border-radius: 50%;
+  font-weight: 700;
+  line-height: 2em;
+  text-align: center;
+
+  &:hover {
+    @include linear-gradient(lightgrey, $pink);
+  }
+}
+
+.top-anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 1em;
+  height: 1em;
+}
+
 // secondary navigation
+// ------------------------------------
 
 .secondary-nav {
   display: inline-block;

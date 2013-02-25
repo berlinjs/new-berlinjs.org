@@ -1,0 +1,3 @@
+regeneration: true
+future: true
+exclude: stylesheets/base, stylesheets/components/, stylesheets/modules/

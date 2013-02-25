@@ -1,27 +1,6 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width">
-  <title>Berlin.JS – Berlin's finest JavaScript usergroup</title>
-  <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="stylesheets/styles.css">
-  <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,700,300italic' rel='stylesheet' type='text/css'>
-</head>
+{% include head.html %}
 <body class="landingpage">
-  <span id="top" class="top-anchor"> </span>
-  <header class="site-header" role="banner">
-    <div class="wrapper">
-      <a href="index.html" tabindex="1">
-        <h1 class="site-title">Berlin.JS</h1>
-      </a>
-    <!-- 
-      Using the footer anchor navigation pattern for mobile. Not the most elegant solution but pretty robust and compatible. 
-    -->
-    <a href="#hub-nav" class="go-to-nav" tabindex="-1">&#9776; Menu</a>
-  </div>
-</header>
+{% include header.html %}
 <div class="image-container">
   <img src="images/berlinjs_header.jpg" alt="berlinjs">
 </div>
@@ -139,48 +118,4 @@
       {{ content }}
     </div>
   </div>
-  <footer class="site-footer">
-    <div class="wrapper line">
-      <!-- main navigation -->
-      <nav id="hub-nav" class="hub-nav" role="navigation">
-        <a href="index.html" class="nav-item"><i class="icon-home"></i></a>
-        <a class="regular nav-item" href="regular.html" tabindex="2">Regular</a>
-        <a class="apps nav-item" href="apps.html" tabindex="3">Apps</a>
-        <a class="nav-item" href="page.html" tabindex="6">Reject.JS</a>
-        <a class="nav-item" href="page.html" tabindex="7">Nodecopter</a>
-        <a href="#top" class="nav-item back-to-top" tabindex="-1">&uArr; Back to top</a>
-      </nav>
-      <!-- /main navigation -->
-      <section class="unit one_fourth">
-        <h5>Learn about Berlin.JS</h5>
-        <ul>
-          <li><a href="index.html#become-speaker">Become a speaker</a></li>
-          <li><a href="index.html#host-event">How to host an event</a></li>
-          <li><a href="index.html#code-of-conduct">Our code of condcut</a></li>
-          <li><a href="index.html#team">Meet the team</a></li>
-        </ul>
-      </section>
-      <section class="unit one_fourth">
-        <h5>Connect with us</h5>
-        <ul>
-          <li>
-            <a href="https://twitter.com/berlinjs">Follow Berlin.JS on Twitter</a>
-          </li>
-          <li>
-            <a href="http://groups.google.com/group/js-berlin">Join our mailinglist</a>
-          </li>
-          <li>
-            <a href="https://github.com/berlinjs/berlinjs.org">Watch the code on Github</a>
-          </li>
-        </ul>
-      </section>
-      <section class="unit one_fourth">
-        <h5>Our supporters</h5>
-        <ul>
-          <li>Our meetups are kindly hosted by <a href="http://co-up.de">Co.Up Coworkingspace</a></li>
-        </ul>
-      </section>
-    </div>
-  </footer>
-</body>
-</html>
+{% include footer.html %}

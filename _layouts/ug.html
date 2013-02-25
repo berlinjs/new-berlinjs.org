@@ -1,36 +1,17 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" /> 
-    <title>Berlin.JS – Berlin's finest JavaScript usergroup</title>
-    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono|family=Droid+Serif:400italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-  </head>
-  <body class="sub-page {{ page.class }}">
-    <span id="top" class="top-anchor"> </span>
-    <header class="site-header" role="banner">
-      <div class="wrapper">
-        <a href="index.html" tabindex="1">
-          <h1 class="site-title">Berlin.JS</h1>
-        </a>
-      <!-- 
-        Using the footer anchor navigation pattern for mobile. Not the most elegant solution but pretty robust and compatible. 
-      -->
-      <a href="#hub-nav" class="go-to-nav" tabindex="-1">&#9776; Menu</a>
-    </div>
-  </header>
+{% include head.html %}
+<body class="sub-page {{ page.class }}">
+{% include header.html %}
   <div class="content-wrapper">
     <aside class="sidebar sidebar-left">
       <header>
         <hgroup class="title">
-          <h2><span>{{ page.name }}.</span>Berlin.JS</h2>
+          <h2><span>{{ page.title }}.</span>Berlin.JS</h2>
           <h4>// {{ page.description }}</h4>
         </hgroup>
       </header>
       <nav class="secondary-nav">
         <a href="#announcement" class="nav-item">Next Meetup</a>
-        <a href="#about" class="nav-item">About {{ page.name }}.Berlin.JS</a>
+        <a href="#about" class="nav-item">About {{ page.title }}.Berlin.JS</a>
         <a href="#team" class="nav-item">Meet the team</a>
       </nav>
     </aside>
@@ -114,48 +95,4 @@
           </article>
         </div>
       </div>
-      <footer class="site-footer">
-        <div class="wrapper line">
-          <!-- main navigation -->
-          <nav id="hub-nav" class="hub-nav" role="navigation">
-            <a href="index.html" class="nav-item"><i class="icon-home"></i></a>
-            <a class="regular nav-item" href="regular.html" tabindex="2">Regular</a>
-            <a class="apps nav-item" href="apps.html" tabindex="3">Apps</a>
-            <a class="nav-item" href="page.html" tabindex="6">Reject.JS</a>
-            <a class="nav-item" href="page.html" tabindex="7">Nodecopter</a>
-            <a href="#top" class="nav-item back-to-top" tabindex="-1">&uArr; Back to top</a>
-          </nav>
-          <!-- /main navigation -->
-          <section class="unit one_fourth">
-            <h5>Learn about Berlin.JS</h5>
-            <ul>
-              <li><a href="index.html#become-speaker">Become a speaker</a></li>
-              <li><a href="index.html#host-event">How to host an event</a></li>
-              <li><a href="index.html#code-of-conduct">Our code of condcut</a></li>
-              <li><a href="index.html#team">Meet the team</a></li>
-            </ul>
-          </section>
-          <section class="unit one_fourth">
-            <h5>Connect with us</h5>
-            <ul>
-              <li>
-                <a href="https://twitter.com/berlinjs">Follow Berlin.JS on Twitter</a>
-              </li>
-              <li>
-                <a href="http://groups.google.com/group/js-berlin">Join our mailinglist</a>
-              </li>
-              <li>
-                <a href="https://github.com/berlinjs/berlinjs.org">Watch the code on Github</a>
-              </li>
-            </ul>
-          </section>
-          <section class="unit one_fourth">
-            <h5>Our supporters</h5>
-            <ul>
-              <li>Our meetups are kindly hosted by <a href="http://co-up.de">Co.Up Coworkingspace</a></li>
-            </ul>
-          </section>
-        </div>
-      </footer>
-    </body>
-    </html>
+{% include footer.html %}

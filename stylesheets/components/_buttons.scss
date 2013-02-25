@@ -55,7 +55,7 @@
 // button for regular meetup
 .blue-button {
   @include linear-gradient($light-blue, $blue);
-  border: 1px solid $light-blue;
+  border-color: $light-blue;
   box-shadow: 0 4px 0 $dark-blue;
 
   &:hover {
@@ -70,7 +70,7 @@
 // button for apps meetup
 .orange-button {
   @include linear-gradient($light-orange, $orange);
-  border: 1px solid $light-orange;
+  border-color: $light-orange;
   box-shadow: 0 4px 0 $dark-orange;
 
   &:hover {
@@ -85,7 +85,7 @@
 // button for beginners meetup
 .red-button {
   @include linear-gradient($light-red, $red);
-  border: 1px solid $light-red;
+  border-color: $light-red;
   box-shadow: 0 4px 0 $dark-red;
 
   &:hover {
@@ -100,7 +100,7 @@
 // button for node meetup
 .green-button {
   @include linear-gradient($light-green, $green);
-  border: 1px solid $light-green;
+  border-color: $light-green;
   box-shadow: 0 4px 0 $dark-green;
 
   &:hover {

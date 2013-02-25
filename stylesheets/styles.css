@@ -1541,7 +1541,7 @@ small {
   background: -o-linear-gradient(#67c7e9, #1d9fcd);
   background: -ms-linear-gradient(#67c7e9, #1d9fcd);
   background: linear-gradient(#67c7e9, #1d9fcd);
-  border: 1px solid #67c7e9;
+  border-color: #67c7e9;
   box-shadow: 0 4px 0 #105a74; }
   .blue-button:hover {
     background: #c0e8f6;
@@ -1560,7 +1560,7 @@ small {
   background: -o-linear-gradient(#fad092, #f5a531);
   background: -ms-linear-gradient(#fad092, #f5a531);
   background: linear-gradient(#fad092, #f5a531);
-  border: 1px solid #fad092;
+  border-color: #fad092;
   box-shadow: 0 4px 0 #b77009; }
   .orange-button:hover {
     background: #fce5c3;
@@ -1579,7 +1579,7 @@ small {
   background: -o-linear-gradient(#f5505f, #d30c1e);
   background: -ms-linear-gradient(#f5505f, #d30c1e);
   background: linear-gradient(#f5505f, #d30c1e);
-  border: 1px solid #f5505f;
+  border-color: #f5505f;
   box-shadow: 0 4px 0 #720710; }
   .red-button:hover {
     background: #f8808b;
@@ -1598,7 +1598,7 @@ small {
   background: -o-linear-gradient(#bce56e, #90c924);
   background: -ms-linear-gradient(#bce56e, #90c924);
   background: linear-gradient(#bce56e, #90c924);
-  border: 1px solid #bce56e;
+  border-color: #bce56e;
   box-shadow: 0 4px 0 #527215; }
   .green-button:hover {
     background: #d0ed99;

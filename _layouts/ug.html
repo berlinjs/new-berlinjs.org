@@ -102,38 +102,15 @@
             <a href="#top" class="button back-to-top">&uArr;</a>
           </article>
           <article id="about" class="content">
-            {{ content }}
+            {{ page.blurb | markdownify }}
             <a href="#top" class="button back-to-top">&uArr;</a>
           </article>
           <article id="team" class="content team cf">
             <h2>Meet the team</h2>
-            <div class="person">
-              <div class="person-picture">
-                <img src="images/team/mathias_schaefer.png" alt="Mathias Schäfer">
-                <span class="person-links">
-                  <a class="icon-twitter" href="https://twitter.com/molily"></a>
-                  <a class="icon-cloud" href="http://molily.de/"></a>
-                </span>
-              </div>
-              <div class="person-info">
-                <h4 class="person-name">Mathias Schäfer</h4>
-                <p>
-                  Web developer at <a href="https://twitter.com/9elements">@9elements</a>. Likes JavaScript & Ruby. Creator of <a href="https://twitter.com/chaplinjs">@chaplinjs</a>. Co-organizer of Apps.Berlin.JS. My hobbies are reading and writing.
-                </p>
-              </div>
-            </div>
-            <div class="person">
-              <div class="person-picture">
-                <img src="images/team/benjamin_krause.jpeg" alt="Benjamin Krause">
-                <span class="person-links">
-                  <a class="icon-twitter" href="https://twitter.com/omdb"></a>
-                </span>
-              </div>
-              <div class="person-info">
-                <h4 class="person-name">Benjamin Krause</h4>
-                <p>Founder and CTO of <a href="http://www.moviepilot.com/">moviepilot</a>; movie geek.</p>
-              </div>
-            </div>
+            {% comment %}
+              for now the team is the “content” since it's the hardest to express as yaml/markdown.
+            {% endcomment %}
+            {{ content }}
           </article>
         </div>
       </div>

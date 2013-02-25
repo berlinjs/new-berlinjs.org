@@ -7,7 +7,7 @@
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono|family=Droid+Serif:400italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="stylesheets/styles.css">
   </head>
-  <body class="sub-page apps">
+  <body class="sub-page {{ page.class }}">
     <span id="top" class="top-anchor"> </span>
     <header class="site-header" role="banner">
       <div class="wrapper">
@@ -24,13 +24,13 @@
     <aside class="sidebar sidebar-left">
       <header>
         <hgroup class="title">
-          <h2><span>Apps.</span>Berlin.JS</h2>
-          <h4>// JavaScript applications</h4>
+          <h2><span>{{ page.name }}.</span>Berlin.JS</h2>
+          <h4>// {{ page.description }}</h4>
         </hgroup>
       </header>
       <nav class="secondary-nav">
         <a href="#announcement" class="nav-item">Next Meetup</a>
-        <a href="#about" class="nav-item">About Usergroup.Berlin.JS</a>
+        <a href="#about" class="nav-item">About {{ page.name }}.Berlin.JS</a>
         <a href="#team" class="nav-item">Meet the team</a>
       </nav>
     </aside>
@@ -40,18 +40,14 @@
               <div class="unit one_half">
                 <hgroup>
                   <h3>Next Meetup:</h3>
-                  <h1>February 28<sup>th</sup></h1>
+                  <h1>{{ page.next_date }}</h1>
                 </hgroup>
               </div>
               <div class="unit one_half last_unit">
                 <ul class="event-details">
-                  <li class="interval">Once in three months</li>
-                  <li class="time">starts 7:00pm</li>
-                  <li class="location">
-                    <a href="http://co-up.de">Co.Up Coworkingspace</a>, third floor
-                    <span>Adalbertstraße 7-8, Berlin-Kreuzberg</span><br>
-                    <a href="https://maps.google.de/maps/ms?msid=207696417173809255317.0004d48006688928a9cf9&msa=0" class="button">Directions</a>
-                  </li>
+                  <li class="interval">{{ page.interval }}</li>
+                  <li class="time">{{ page.time }}</li>
+                  <li class="location">{{ page.location }}</li>
                 </ul>
               </div>
             </div>
@@ -106,27 +102,7 @@
             <a href="#top" class="button back-to-top">&uArr;</a>
           </article>
           <article id="about" class="content">
-            
-            <h4>Client-side JavaScript applications</h4>
-            <h2>About Apps.Berlin.JS</h2>
-            <p>
-              <strong>Apps.Berlin.Js</strong> is a Berlin.js spin-off with a special focus on JavaScript running in the browser on top of HTML & CSS. This includes JavaScript-driven web applications (“HTML5 apps”), desktop browser apps as well as mobile apps and games written in JavaScript.
-            </p>
-            <h3>How it works</h3>
-            <p>  
-              Our goal is to have high quality talks with a low entry barrier. We’d like to attract people who are familiar with developing JavaScript apps, as well as people who are new in this world.
-            </p>
-            <p>
-              We also aim to promote discussions and hear voices from different backgrounds. Therefore we usually have…
-            </p>
-            <ul>
-              <li>Two slots for 15-20 min talks + discussion and</li>
-              <li>Two slots for 5-10 min talks + discussion</li>
-            </ul>
-            <p>
-              If you would like to give a presentation, just drop us a mail!
-              In case you’ve missed the recent apps.berlin.js meetup, you can browse the slides of all past editions.
-            </p>
+            {{ content }}
             <a href="#top" class="button back-to-top">&uArr;</a>
           </article>
           <article id="team" class="content team cf">

@@ -1,3 +1,8 @@
 regeneration: true
 future: true
 exclude: README.md
+
+jekyll_sort:
+  - src: pages
+    dest: ugs
+    by: sort

@@ -115,39 +115,31 @@ a [class*=" icon-"] {
   font-size: 1.3333333333333333em; }
 
 .btn [class^="icon-"],
-.btn [class*=" icon-"], .nav [class^="icon-"],
-.nav [class*=" icon-"] {
+.btn [class*=" icon-"], .nav [class^="icon-"], .nav [class*=" icon-"] {
   display: inline;
   /* keeps button heights with and without icons the same */ }
   .btn [class^="icon-"].icon-large,
-  .btn [class*=" icon-"].icon-large, .nav [class^="icon-"].icon-large,
-  .nav [class*=" icon-"].icon-large {
+  .btn [class*=" icon-"].icon-large, .nav [class^="icon-"].icon-large, .nav [class*=" icon-"].icon-large {
     line-height: .9em; }
   .btn [class^="icon-"].icon-spin,
-  .btn [class*=" icon-"].icon-spin, .nav [class^="icon-"].icon-spin,
-  .nav [class*=" icon-"].icon-spin {
+  .btn [class*=" icon-"].icon-spin, .nav [class^="icon-"].icon-spin, .nav [class*=" icon-"].icon-spin {
     display: inline-block; }
 
 .nav-tabs [class^="icon-"],
-.nav-tabs [class*=" icon-"], .nav-pills [class^="icon-"],
-.nav-pills [class*=" icon-"] {
+.nav-tabs [class*=" icon-"], .nav-pills [class^="icon-"], .nav-pills [class*=" icon-"] {
   /* keeps button heights with and without icons the same */ }
   .nav-tabs [class^="icon-"], .nav-tabs [class^="icon-"].icon-large,
   .nav-tabs [class*=" icon-"],
-  .nav-tabs [class*=" icon-"].icon-large, .nav-pills [class^="icon-"], .nav-pills [class^="icon-"].icon-large,
-  .nav-pills [class*=" icon-"],
-  .nav-pills [class*=" icon-"].icon-large {
+  .nav-tabs [class*=" icon-"].icon-large, .nav-pills [class^="icon-"], .nav-pills [class^="icon-"].icon-large, .nav-pills [class*=" icon-"], .nav-pills [class*=" icon-"].icon-large {
     line-height: .9em; }
 
 li [class^="icon-"],
-li [class*=" icon-"], .nav li [class^="icon-"],
-.nav li [class*=" icon-"] {
+li [class*=" icon-"], .nav li [class^="icon-"], .nav li [class*=" icon-"] {
   display: inline-block;
   width: 1.25em;
   text-align: center; }
   li [class^="icon-"].icon-large,
-  li [class*=" icon-"].icon-large, .nav li [class^="icon-"].icon-large,
-  .nav li [class*=" icon-"].icon-large {
+  li [class*=" icon-"].icon-large, .nav li [class^="icon-"].icon-large, .nav li [class*=" icon-"].icon-large {
     /* increased font size for icon-large */
     width: 1.5625em; }
 

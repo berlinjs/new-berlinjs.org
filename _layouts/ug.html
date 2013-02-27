@@ -32,54 +32,65 @@
                 </ul>
               </div>
             </div>
-            <section class="talk free-slot">
-              <header class="talk-title">
-                <h4 class="person-name">Free talk slot (5-10 min talk)</h4>
-                <h3>
-                  This slot could be yours! Submit your talk now.
-                </h3>
-              </header>
-              <p>
-                You did some crazy stuff with Javascript? You want to show it to the community?<br>
-                Drop us a line on your topic on <a href="http://twitter.com/berlinjs">Twitter</a> or to our <a href="http://groups.google.com/group/js-berlin">Mailinglist</a>.
-              </p>
-            </section>
-            <section class="talk free-slot">
-              <header class="talk-title">
-                <h4 class="person-name">Free talk slot (5-10 min talk)</h4>
-                <h3>
-                  This slot could be yours! Submit your talk now.
-                </h3>
-              </header>
-              <p>
-                You did some crazy stuff with Javascript? You want to show it to the community?<br>
-                Drop us a line on your topic on <a href="http://twitter.com/berlinjs">Twitter</a> or to our <a href="http://groups.google.com/group/js-berlin">Mailinglist</a>.
-              </p>
-            </section>
-            <section class="talk free-slot">
-              <header class="talk-title">
-                <h4 class="person-name">Free talk slot (15-20 min talk)</h4>
-                <h3>
-                  This slot could be yours! Submit your talk now.
-                </h3>
-              </header>
-              <p>
-                You did some crazy stuff with Javascript? You want to show it to the community?<br>
-                Drop us a line on your topic on <a href="http://twitter.com/berlinjs">Twitter</a> or to our <a href="http://groups.google.com/group/js-berlin">Mailinglist</a>.
-              </p>
-            </section>
-            <section class="talk free-slot">
-              <header class="talk-title">
-                <h4 class="person-name">Free talk slot (15-20 min talk)</h4>
-                <h3>
-                  This slot could be yours! Submit your talk now.
-                </h3>
-              </header>
-              <p>
-                You did some crazy stuff with Javascript? You want to show it to the community?<br>
-                Drop us a line on your topic on <a href="http://twitter.com/berlinjs">Twitter</a> or to our <a href="http://groups.google.com/group/js-berlin">Mailinglist</a>.
-              </p>
-            </section>
+
+            {% assign talks = site.talks[page.class][page.next_date] %}
+            {% for slot_ in page.slots %}
+            {% assign slot = slot_[0] %}
+            {% assign info = slot_[1] %}
+            {% assign talk = talks[slot] %}
+
+              {% if talk == nil %}
+                <section class="talk free-slot">
+                  <header class="talk-title">
+                    <h4 class="person-name">Free talk slot{% if info %} ({{info}}){% endif %}</h4>
+                    <h3>
+                      This slot could be yours! Submit your talk now.
+                    </h3>
+                  </header>
+                  <p>
+                    You did some crazy stuff with Javascript? You want to show it to the community?<br>
+                    Drop us a line on your topic on <a href="http://twitter.com/berlinjs">Twitter</a> or to our <a href="http://groups.google.com/group/js-berlin">Mailinglist</a>.
+                  </p>
+                </section>
+
+              {% else %}
+
+                <section class="talk">
+                  <aside class="person-picture">
+                    {% if talk.author.picture %}
+                      <img src="images/speaker/{{talk.author.picture}}" alt="person"/>
+                    {% endif %}
+                    <span class="person-links">
+                      {% if talk.author.links.twitter %}
+                        <a class="icon-twitter" href="https://twitter.com/{{talk.author.links.twitter}}"></a>
+                      {% endif %}
+                      {% if talk.author.links.github %}
+                        <a class="icon-github-alt" href="https://github.com/{{talk.author.links.github}}"></a>
+                      {% endif %}
+                      {% if talk.author.links.web %}
+                        <a class="icon-cloud" href="{{talk.author.links.web}}"></a>
+                      {% endif %}
+                    </span>
+                  </aside>
+                  <hgroup class="talk-title">
+                    <h4 class="person-name">{{talk.author.name}}</h4>
+                    <h3>
+                      {{talk.title}}
+                    </h3>
+                  </hgroup>
+                  {{talk.content}}
+                  {% if talk.author.description %}
+                    <div class="person person-info">
+                      {{talk.author.description | markdownify}}
+                    </div>
+                  {% endif %}
+                </section>
+
+
+              {% endif %}
+
+            {% endfor %}
+
             <a href="#top" class="button back-to-top">&uArr;</a>
           </article>
           <article id="about" class="content">

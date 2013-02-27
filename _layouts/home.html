@@ -7,105 +7,89 @@
 <div class="content-wrapper cf">
   <aside class="events sidebar-right">
     <ul class="event-timeline">
-      <li class="next event regular">
-        <hgroup class="title">
-          <h2><span>Regular.</span>Berlin.JS</h2>
-          <h4>// the original meetup</h4>
-        </hgroup>
-        <p class="date">
-          Next meetup
-          <time datetime="2013-02-21T19:30"> 
-            <span class="month">February</span>
-            <span class="day">21<sup>st</sup></span>
-          </time>
-          <a class="button blue-button" href="regular.html#announcement">See the details</a>
-        </p>
-          <ul class="event-details">
-            <li class="cf">
-              <div class="person-picture">
-                <img src="images/speaker/leon_weidauer.jpeg" alt="Leon Weidauer">
-              </div>
-              <hgroup class="talk-title">
-                <span class="person-name">Leon Weidauer</span>
-                <h4>
-                  Making an image conversion service with node.js
-                </h4>
-              </hgroup>
-            </li>
-            <li class="cf">
-              <div class="person-picture">
-                <img src="images/speaker/gerrit_wanderer.jpg" alt="Gerrit Wanderer">
-              </div>
-              <hgroup class="talk-title">
-                <span class="person-name">Gerrit Wanderer</span>
-                <h4>
-                  The basics of Ember.js
-                </h4>
-              </hgroup>
-            </li>
-            <li class="cf">
-              <div class="person-picture">
-                <img src="images/speaker/claudio_cicali.jpg" alt="Claudio Cicali">
-              </div>
-              <hgroup class="talk-title">
-                <span class="person-name">Claudio Cicali</span>
-                <h4>
-                  (Some) JavaScript pitfalls
-                </h4>
-              </hgroup>
-            </li>
-            <li class="cf">
-              <div class="person-picture">
-                <img src="images/person_placeholder.png" alt="person">
-              </div>
-              <hgroup class="talk-title">
-                <span class="person-name">Free talk slot</span>
-                <h4>
-                  This could be your talk – <a href="#become-speaker">learn how to claim it</a>
-                </h4>
-              </hgroup>
-            </li>
-          </ul>
-        </li>
-        <li class="event apps">
-          <hgroup class="title">
-            <h2><span class="event-color">Apps.</span>Berlin.JS</h2>
-            <h4>// JavaScript applications</h4>
-          </hgroup>
-          <p class="date">
-            <time datetime="2013-01-17T19:30"> 
-              <span class="month">Feb</span>
-              <span class="day">28<sup>th</sup></span>
-            </time>
-            <a class="detail-link" href="apps.html#announcement">Learn more ➤</a>
-          </p>
-        </li>
-        <li class="event beginners">
-          <hgroup class="title">
-            <h2><span class="event-color">Beginners.</span>Berlin.JS</h2>
-            <h4>// rookies on a meetup</h4>
-          </hgroup>
-          <p class="date">
-            <time datetime="2013-01-17T19:30"> 
-              <span class="month">Jan</span>
-              <span class="day">17<sup>th</sup></span>
-            </time>
-            <a class="detail-link" href="beginners.html#announcement">Learn more ➤</a>
-          </p>
-        </li>
-        <li class="event node">
-          <hgroup class="title">
-            <h2><span class="event-color">Node.</span>Berlin.JS</h2>
-            <h4>// let's talk about node.js</h4>
-          </hgroup>
-          <p class="date">
-            <time datetime="2013-01-17T19:30"> 
-              <span class="month">Jan</span>
-              <span class="day">17<sup>th</sup></span>
-            </time>
-            <a class="detail-link" href="node.html#announcement">Learn more ➤</a>
-          </p>
-        </li>
+
+      {% for meetup in site.next_meetups %}
+        {% if forloop.first %}
+
+          <li class="next event regular">
+            <hgroup class="title">
+              <h2><span>Regular.</span>Berlin.JS</h2>
+              <h4>// the original meetup</h4>
+            </hgroup>
+            <p class="date">
+              Next meetup
+              <time datetime="2013-02-21T19:30"> 
+                <span class="month">February</span>
+                <span class="day">21<sup>st</sup></span>
+              </time>
+              <a class="button blue-button" href="regular.html#announcement">See the details</a>
+            </p>
+            <ul class="event-details">
+              <li class="cf">
+                <div class="person-picture">
+                  <img src="images/speaker/leon_weidauer.jpeg" alt="Leon Weidauer"/>
+                </div>
+                <hgroup class="talk-title">
+                  <span class="person-name">Leon Weidauer</span>
+                  <h4>
+                    Making an image conversion service with node.js
+                  </h4>
+                </hgroup>
+              </li>
+              <li class="cf">
+                <div class="person-picture">
+                  <img src="images/speaker/gerrit_wanderer.jpg" alt="Gerrit Wanderer"/>
+                </div>
+                <hgroup class="talk-title">
+                  <span class="person-name">Gerrit Wanderer</span>
+                  <h4>
+                    The basics of Ember.js
+                  </h4>
+                </hgroup>
+              </li>
+              <li class="cf">
+                <div class="person-picture">
+                  <img src="images/speaker/claudio_cicali.jpg" alt="Claudio Cicali"/>
+                </div>
+                <hgroup class="talk-title">
+                  <span class="person-name">Claudio Cicali</span>
+                  <h4>
+                    (Some) JavaScript pitfalls
+                  </h4>
+                </hgroup>
+              </li>
+              <li class="cf">
+                <div class="person-picture">
+                  <img src="images/person_placeholder.png" alt="person"/>
+                </div>
+                <hgroup class="talk-title">
+                  <span class="person-name">Free talk slot</span>
+                  <h4>
+                    This could be your talk – <a href="#become-speaker">learn how to claim it</a>
+                  </h4>
+                </hgroup>
+              </li>
+            </ul>
+          </li>
+
+        {% else %}
+
+          <li class="event {{meetup.ug.class}}">
+            <hgroup class="title">
+              <h2><span class="event-color">{{meetup.ug.title}}.</span>Berlin.JS</h2>
+              <h4>// {{meetup.ug.description}}</h4>
+            </hgroup>
+            <p class="date">
+              <time datetime="{{meetup.date}}"> 
+                {{ meetup.date | fancy_short_date_format }}
+              </time>
+              <a class="detail-link" href="{{meetup.ug.url}}#announcement">Learn more ➤</a>
+            </p>
+          </li>
+
+        {% endif %}
+      {% endfor %}
+
         <!-- <li class="event">
           <a href="#more" class="more-events">show me more</a>
         </li> -->

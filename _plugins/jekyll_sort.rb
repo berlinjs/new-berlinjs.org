@@ -2,7 +2,7 @@ module Jekyll
 
   class DataSorter < Jekyll::Generator
     safe true
-    priority :lowest
+    priority :normal
 
     def initialize(config)
     end

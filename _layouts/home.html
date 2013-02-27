@@ -11,18 +11,17 @@
       {% for meetup in site.next_meetups %}
         {% if forloop.first %}
 
-          <li class="next event regular">
+          <li class="next event {{meetup.ug.class}}">
             <hgroup class="title">
-              <h2><span>Regular.</span>Berlin.JS</h2>
-              <h4>// the original meetup</h4>
+              <h2><span>{{meetup.ug.title}}.</span>Berlin.JS</h2>
+              <h4>// {{meetup.ug.description}}</h4>
             </hgroup>
             <p class="date">
               Next meetup
-              <time datetime="2013-02-21T19:30"> 
-                <span class="month">February</span>
-                <span class="day">21<sup>st</sup></span>
+              <time datetime="{{meetup.date}}T{{meetup.ug.next_time}}"> 
+                {{ meetup.date | fancy_date_format }}
               </time>
-              <a class="button blue-button" href="regular.html#announcement">See the details</a>
+              <a class="button blue-button" href="{{meetup.ug.url}}#announcement">See the details</a>
             </p>
             <ul class="event-details">
               <li class="cf">
@@ -80,7 +79,7 @@
               <h4>// {{meetup.ug.description}}</h4>
             </hgroup>
             <p class="date">
-              <time datetime="{{meetup.date}}"> 
+              <time datetime="{{meetup.date}}T{{meetup.ug.next_time}}"> 
                 {{ meetup.date | fancy_short_date_format }}
               </time>
               <a class="detail-link" href="{{meetup.ug.url}}#announcement">Learn more ➤</a>

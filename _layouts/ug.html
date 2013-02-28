@@ -58,7 +58,9 @@
                 <section class="talk">
                   <aside class="person-picture">
                     {% if talk.author.picture %}
-                      <img src="images/speaker/{{talk.author.picture}}" alt="person"/>
+                      <img src="images/speaker/{{talk.author.picture}}" alt="{{talk.author.name}}"/>
+                    {% else %}
+                      <img src="images/person_placeholder.png" alt="{{talk.author.name}}"/>
                     {% endif %}
                     <span class="person-links">
                       {% if talk.author.links.twitter %}

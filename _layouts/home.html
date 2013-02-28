@@ -23,51 +23,44 @@
               </time>
               <a class="button blue-button" href="{{meetup.ug.url}}#announcement">See the details</a>
             </p>
+
             <ul class="event-details">
-              <li class="cf">
-                <div class="person-picture">
-                  <img src="images/speaker/leon_weidauer.jpeg" alt="Leon Weidauer"/>
-                </div>
-                <hgroup class="talk-title">
-                  <span class="person-name">Leon Weidauer</span>
-                  <h4>
-                    Making an image conversion service with node.js
-                  </h4>
-                </hgroup>
-              </li>
-              <li class="cf">
-                <div class="person-picture">
-                  <img src="images/speaker/gerrit_wanderer.jpg" alt="Gerrit Wanderer"/>
-                </div>
-                <hgroup class="talk-title">
-                  <span class="person-name">Gerrit Wanderer</span>
-                  <h4>
-                    The basics of Ember.js
-                  </h4>
-                </hgroup>
-              </li>
-              <li class="cf">
-                <div class="person-picture">
-                  <img src="images/speaker/claudio_cicali.jpg" alt="Claudio Cicali"/>
-                </div>
-                <hgroup class="talk-title">
-                  <span class="person-name">Claudio Cicali</span>
-                  <h4>
-                    (Some) JavaScript pitfalls
-                  </h4>
-                </hgroup>
-              </li>
+            {% assign talks = site.talks[meetup.ug.class][meetup.date] %}
+            {% for slot_ in meetup.ug.slots %}
+            {% assign slot = slot_[0] %}
+            {% assign info = slot_[1] %}
+            {% assign talk = talks[slot] %}
+
+              {% if talk == nil %}
               <li class="cf">
                 <div class="person-picture">
                   <img src="images/person_placeholder.png" alt="person"/>
                 </div>
                 <hgroup class="talk-title">
-                  <span class="person-name">Free talk slot</span>
+                  <span class="person-name">Free talk slot{% if info %} ({{info}}){% endif %}</span>
                   <h4>
                     This could be your talk – <a href="#become-speaker">learn how to claim it</a>
                   </h4>
                 </hgroup>
               </li>
+
+              {% else %}
+
+              <li class="cf">
+                <div class="person-picture">
+                  <img src="images/{% if talk.author.picture %}speaker/{{talk.author.picture}}{% else %}person_placeholder.png{% endif %}" alt="{{talk.author.name}}"/>
+                </div>
+                <hgroup class="talk-title">
+                  <span class="person-name">{{talk.author.name}}</span>
+                  <h4>
+                    {{talk.title}}
+                  </h4>
+                </hgroup>
+              </li>
+
+              {% endif %}
+
+            {% endfor %}
             </ul>
           </li>
 

@@ -10,6 +10,8 @@ module Jekyll
     def generate(site)
       config = site.config
 
+      config['ugs'].select! {|page| page["layout"] == 'ug'}
+
       config['talks'] = talks = {}
       config['meetups'] = meetups = []
 
@@ -35,6 +37,16 @@ module Jekyll
         post.data['title'] = title
         post.data['slot'] = slot
         meetup[slot] = post
+      end
+
+      config['ugs'].each do |ug|
+        ug_talks = (talks[ug['class']] ||= {})
+        next_date = ug['next_date']
+        puts '%s: %s' % [ug['class'], next_date]
+        if ug_talks[next_date] === nil
+          puts "  no talks yet, creating empty meetup..."
+          meetups << (ug_talks[next_date] = {"date" => next_date, "ug" => ug})
+        end
       end
 
       meetups.sort {|a,b| a["date"] <=> b["date"] }

@@ -9,6 +9,7 @@
     <ul class="event-timeline">
 
       {% for meetup in site.next_meetups %}
+        <!--{{meetup}}-->
         {% if forloop.first %}
 
           <li class="next event {{meetup.ug.class}}">

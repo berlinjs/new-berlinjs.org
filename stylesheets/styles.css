@@ -1873,10 +1873,14 @@ small {
   color: #fff; }
   .site-footer section {
     margin-left: 1em; }
+  .site-footer .one_fourth {
+    width: 100%; }
 
 @media screen and (min-width: 700px) {
   .site-footer {
-    padding-top: 2em; } }
+    padding-top: 2em; }
+    .site-footer .one_fourth {
+      width: 25%; } }
 .person {
   display: table;
   color: #aaa;

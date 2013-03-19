@@ -11,11 +11,19 @@
   section {
     margin-left: 1em;
   }
+
+  .one_fourth {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 700px) {
 
   .site-footer {
     padding-top: 2em;
+
+    .one_fourth {
+      width: 25%;
+    }
   }
 }

@@ -51,6 +51,26 @@ ol {
   padding-left: 1.5em;
 }
 
+ul ul {
+  margin-bottom: 0;
+}
+
+.bullet-list li {
+  margin-left: 1.5em;
+}
+
+.bullet-list li:before {
+  position: relative;
+  display: block;
+  height: .25em;
+  width: .25em;
+  left: -1.5em;
+  top: .9em;
+  background-color: grey;
+  border-radius: 1em;
+  content: "";
+}
+
 small {
   font-size: 0.77778em;
   line-height: 1.86667em;

@@ -1738,6 +1738,16 @@ small {
     background: -ms-linear-gradient(lightgrey, #ff3f6d);
     background: linear-gradient(lightgrey, #ff3f6d); }
 
+.nav-item + .back-to-top {
+  display: block;
+  width: auto;
+  height: auto;
+  padding-left: .5em;
+  border-radius: 0;
+  text-align: left; }
+  .nav-item + .back-to-top:hover {
+    background: rgba(255, 255, 255, 0.1); }
+
 .top-anchor {
   position: absolute;
   top: 0;

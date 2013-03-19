@@ -81,6 +81,19 @@
   }
 }
 
+.nav-item + .back-to-top {
+  display: block;
+  width: auto;
+  height: auto;
+  padding-left: .5em;
+  border-radius: 0;
+  text-align: left;
+
+  &:hover {
+    background: rgba(255,255,255,.1);
+  }
+}
+
 .top-anchor {
   position: absolute;
   top: 0;

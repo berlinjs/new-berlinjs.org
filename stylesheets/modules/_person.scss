@@ -116,9 +116,10 @@ a {
   }
 }
 
-// Speaker within event details
+// Speaker within event details and speaker testimonials
 
-.event-details .person-picture {
+.event-details .person-picture,
+.testimonial .person-picture {
   width: 4em;
   height: 4em;
   margin-top: 0;

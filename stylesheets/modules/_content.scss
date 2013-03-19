@@ -13,14 +13,28 @@
   }
 }
 
-.testimonial {
-  margin: 1em;
-}
-
 // big imagery in the background of the landingpage
 
 .image-container {
   display: none;
+}
+
+// testimonials
+
+.testimonial {
+  .quote {
+    display: block;
+    margin: 1em 0;
+    font: italic 300 150%/1.5em 'Ubuntu';
+
+    &:before {
+      content: " “ ";
+    }
+
+    &:after {
+      content: " ” ";
+    }
+  }
 }
 
 @media screen and (min-width: 700px) {

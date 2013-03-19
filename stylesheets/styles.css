@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -1807,11 +1808,17 @@ small {
     position: relative;
     padding: 1em 0; }
 
-.testimonial {
-  margin: 1em; }
-
 .image-container {
   display: none; }
+
+.testimonial .quote {
+  display: block;
+  margin: 1em 0;
+  font: italic 300 150%/1.5em "Ubuntu"; }
+  .testimonial .quote:before {
+    content: " “ "; }
+  .testimonial .quote:after {
+    content: " ” "; }
 
 @media screen and (min-width: 700px) {
   .image-container {
@@ -1937,13 +1944,15 @@ a {
 .talk .person-info {
   margin-left: 0; }
 
-.event-details .person-picture {
+.event-details .person-picture,
+.testimonial .person-picture {
   width: 4em;
   height: 4em;
   margin-top: 0;
   border-radius: 50%;
   border: .25em solid #ccc; }
-  .event-details .person-picture img {
+  .event-details .person-picture img,
+  .testimonial .person-picture img {
     border: none; }
 
 .sidebar-left {

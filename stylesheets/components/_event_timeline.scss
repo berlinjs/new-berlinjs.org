@@ -96,6 +96,13 @@
   color: #666;
   font-size: .75em;
 
+  i {
+    display: inline-block;
+    margin: 0 .5em .5em 0;
+    font-size: 1.5em;
+    line-height: .5em;
+  }
+
   li {
     padding: .5em 0;
     border-bottom: 1px solid #e1e1e1;
@@ -104,9 +111,5 @@
     &:last-child {
       border-bottom: none;
     }
-
-    &.interval { background: url(../images/icons.png) no-repeat 0 0; }
-    &.time { background: url(../images/icons.png) no-repeat 0 -100px; }
-    &.location { background: url(../images/icons.png) no-repeat 0 -200px; }
   }
 }
